@@ -28,23 +28,21 @@ Solo necesitamos Streamlit, ya que SQLite viene integrado en Python:
 $ pip install streamlit
 
 ### 3. Crear el archivo del código
-1. Crea un archivo nuevo en tu editor (VS Code) llamado: recetario_web.py
+1. Crea un archivo nuevo en tu editor (VS Code) llamado: cookbook.py
 2. Pega el código de la aplicación (el que incluye la función inicializar_db_si_no_existe).
 3. Guarda el archivo dentro de la carpeta que creaste.
 
 ### 4. Lanzar la aplicación
 Ejecuta el servidor local con el siguiente comando:
-$ streamlit run recetario_web.py
-
-> 💡 Nota de Robustez: Al ejecutarlo por primera vez, el programa detectará automáticamente que no existe el archivo de base de datos y creará el archivo "recetas_venezuela.db" con los platos iniciales por ti.
+$ streamlit run cookbook.py
 
 ---
 
 ## 📂 Estructura del Proyecto
 
 Una vez que la aplicación esté funcionando, tu carpeta se verá así:
-* recetario_web.py: Código principal, interfaz y lógica de creación de datos.
-* recetas_venezuela.db: Base de datos generada automáticamente.
+* cookbook.py: Código principal, interfaz y lógica de creación de datos.
+* cookbook.db: Base de datos generada automáticamente.
 * .gitignore: Archivo para evitar subir datos temporales a GitHub.
 
 ---
@@ -53,8 +51,7 @@ Una vez que la aplicación esté funcionando, tu carpeta se verá así:
 
 Este proyecto es totalmente flexible para ediciones:
 
-1. Vía DB Browser (Recomendado): Abre recetas_venezuela.db con el programa, edita la tabla "platos" (puedes añadir platos internacionales como Ensalada César o Pasta), haz clic en el botón "Escribir cambios" (Write Changes) y refresca tu navegador.
-2. Vía Código: Si deseas cambiar los datos que aparecen por defecto, edita la lista "repertorio_inicial" dentro del código, borra el archivo .db y vuelve a iniciar la aplicación.
+-. Vía DB Browser (Recomendado): Abre cookbook.db con el programa, edita la tabla "platos" (puedes añadir platos internacionales como Ensalada César o Pasta), haz clic en el botón "Escribir cambios" (Write Changes) y refresca tu navegador.
 
 ---
 
@@ -64,4 +61,13 @@ Este proyecto es totalmente flexible para ediciones:
 * Arquitectura Robusta: El software es capaz de autogestionar su entorno (crear su propia base de datos) si los archivos faltan.
 
 ---
-Desarrollado por: Arin Romero
+
+## 📷 Imagenes Navegador - Editor Base de Datos 
+
+![alt text](image-1.png)
+
+![alt text](image-2.png)
+
+![alt text](image-3.png)
+
+- Desarrollado por: Arin Romero

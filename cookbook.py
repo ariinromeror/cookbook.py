@@ -2,8 +2,7 @@ import streamlit as st
 import sqlite3
 import os
 
-# CONFIGURACIÓN CONSTANTE
-# Cambiamos el nombre de la DB para que coincida con el proyecto
+
 DB_NAME = "cookbook.db"
 
 def inicializar_db_si_no_existe():
@@ -25,7 +24,7 @@ def inicializar_db_si_no_existe():
                 )
             ''')
             
-            # Datos semilla: Empezamos con Venezuela, pero el sistema es abierto
+            
             repertorio_inicial = [
                 ("Arepa de Reina Pepiada", "Desayunos", "Harina de maíz, aguacate, pollo, mayonesa", "Preparar la masa de arepa, asar. Mezclar pollo desmechado con aguacate y mayonesa. Rellenar.", "https://images.unsplash.com/photo-1541518763669-279f00ed51ca?q=80&w=500", "30 min", "Media"),
                 ("Pabellón Criollo", "Almuerzos", "Arroz blanco, caraotas negras, carne mechada, tajadas", "Cocinar los componentes por separado. Servir de forma tradicional acompañando con plátano frito.", "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=500", "1.5 h", "Alta"),
