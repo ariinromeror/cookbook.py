@@ -1,5 +1,14 @@
+# Seguridad - Aunque no usemos Gemini ahora, es mejor ignorar archivos de entorno
 .env
-__pycache__/
-*.pyc
-.venv/
+
+# Base de Datos Local
+# Ignoramos el archivo .db para que cada desarrollador use 'crear_base.py'
 *.db
+
+# Python - Archivos temporales y caché
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Streamlit - Archivos de configuración local
+.streamlit/

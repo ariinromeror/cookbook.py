@@ -1,29 +1,67 @@
-# Recetario Venezolano con Asistente IA
+# 👨‍💻 Cookbook.py: Manual de Sabores
 
-Este proyecto es una aplicación web que funciona como un recetario interactivo. Utiliza una base de datos local para almacenar platos tradicionales y se integra con la API de Google Gemini para ofrecer un asistente virtual capaz de responder dudas sobre cocina venezolana.
+¡Bienvenido a Cookbook.py! Este no es solo un recetario, es una aplicación web interactiva diseñada con la mentalidad de un desarrollador. Aquí, la gastronomía se encuentra con la ingeniería para ofrecer una experiencia de usuario fluida, robusta y eficiente.
 
-### Componentes del Sistema
+Originalmente enfocado en sabores venezolanos, este manual está diseñado para ser escalable y permitir la integración de platos de cualquier rincón del mundo.
 
-* **Backend y Persistencia**: Se utiliza SQLite para la gestión de datos, permitiendo una consulta rápida de los ingredientes y pasos de preparación.
-* **Inteligencia Artificial**: La aplicación conecta con el modelo Gemini 2.0 Flash para procesar consultas de los usuarios basándose en el contexto del recetario.
-* **Interfaz de Usuario**: Desarrollada con Streamlit para ofrecer una navegación limpia y adaptable.
-* **Seguridad**: Se implementó una arquitectura basada en variables de entorno para proteger las credenciales de la API, evitando la exposición de claves privadas en el repositorio.
+---
 
-### Requisitos Previos
+## 🛠️ Requisitos del Sistema
 
-Es necesario tener instalado Python 3.10 o superior y las librerías listadas en el archivo de requerimientos.
+Antes de comenzar, asegúrate de tener instalado:
+* Python 3.10 o superior (Descárgalo en python.org).
+* Terminal (Bash, CMD o PowerShell).
 
-### Configuración e Instalación
+---
 
-1. **Clonación**: Descargue los archivos del repositorio en su máquina local.
-2. **Dependencias**: Instale los paquetes necesarios ejecutando `pip install -r requirements.txt`.
-3. **Credenciales**: Cree un archivo llamado `.env` en el directorio raíz y defina su llave de acceso de la siguiente manera: `GEMINI_API_KEY=su_clave_aqui`.
-4. **Base de Datos**: Antes de iniciar la aplicación por primera vez, ejecute `python crear_base.py` para generar la estructura de tablas y los datos iniciales.
-5. **Ejecución**: Inicie el servidor local con el comando `streamlit run recetario_web.py`.
+## 🚀 Guía de Instalación y Ejecución Paso a Paso
 
-### Estructura de Archivos
+Sigue estos pasos en tu terminal para configurar el proyecto desde cero:
 
-* `recetario_web.py`: Lógica principal de la aplicación e interfaz.
-* `crear_base.py`: Script de inicialización de la base de datos SQLite.
-* `.env`: Archivo de configuración privada (excluido de Git mediante .gitignore).
-* `requirements.txt`: Lista de dependencias necesarias para el proyecto.
+### 1. Preparar la carpeta del proyecto
+Ejecuta estos comandos para crear tu espacio de trabajo:
+$ mkdir cookbook-py
+$ cd cookbook-py
+
+### 2. Instalar dependencias
+Solo necesitamos Streamlit, ya que SQLite viene integrado en Python:
+$ pip install streamlit
+
+### 3. Crear el archivo del código
+1. Crea un archivo nuevo en tu editor (VS Code) llamado: recetario_web.py
+2. Pega el código de la aplicación (el que incluye la función inicializar_db_si_no_existe).
+3. Guarda el archivo dentro de la carpeta que creaste.
+
+### 4. Lanzar la aplicación
+Ejecuta el servidor local con el siguiente comando:
+$ streamlit run recetario_web.py
+
+> 💡 Nota de Robustez: Al ejecutarlo por primera vez, el programa detectará automáticamente que no existe el archivo de base de datos y creará el archivo "recetas_venezuela.db" con los platos iniciales por ti.
+
+---
+
+## 📂 Estructura del Proyecto
+
+Una vez que la aplicación esté funcionando, tu carpeta se verá así:
+* recetario_web.py: Código principal, interfaz y lógica de creación de datos.
+* recetas_venezuela.db: Base de datos generada automáticamente.
+* .gitignore: Archivo para evitar subir datos temporales a GitHub.
+
+---
+
+## ✍️ Cómo contribuir o editar recetas
+
+Este proyecto es totalmente flexible para ediciones:
+
+1. Vía DB Browser (Recomendado): Abre recetas_venezuela.db con el programa, edita la tabla "platos" (puedes añadir platos internacionales como Ensalada César o Pasta), haz clic en el botón "Escribir cambios" (Write Changes) y refresca tu navegador.
+2. Vía Código: Si deseas cambiar los datos que aparecen por defecto, edita la lista "repertorio_inicial" dentro del código, borra el archivo .db y vuelve a iniciar la aplicación.
+
+---
+
+## 🧠 Aprendizajes de Desarrollo (Nivel Jr)
+* Persistencia Local: Aprendizaje sobre el uso de SQLite para guardar datos de forma permanente.
+* UI Reactiva: Creación de filtros dinámicos que reaccionan a cada letra escrita por el usuario sin recargar la página.
+* Arquitectura Robusta: El software es capaz de autogestionar su entorno (crear su propia base de datos) si los archivos faltan.
+
+---
+Desarrollado por: Arin Romero
